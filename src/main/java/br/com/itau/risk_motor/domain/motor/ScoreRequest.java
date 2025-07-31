@@ -1,4 +1,4 @@
-package br.com.itau.risk_motor.domain;
+package br.com.itau.risk_motor.domain.motor;
 
 import lombok.Data;
 

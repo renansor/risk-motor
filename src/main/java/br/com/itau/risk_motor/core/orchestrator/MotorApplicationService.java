@@ -1,8 +1,8 @@
-package br.com.itau.risk_motor.core;
+package br.com.itau.risk_motor.core.orchestrator;
 
-import br.com.itau.risk_motor.domain.ScoreRequest;
-import br.com.itau.risk_motor.domain.ScoreResponse;
-import br.com.itau.risk_motor.core.MotorDomainService;
+import br.com.itau.risk_motor.core.rules.MotorDomainService;
+import br.com.itau.risk_motor.domain.motor.ScoreRequest;
+import br.com.itau.risk_motor.domain.motor.ScoreResponse;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 

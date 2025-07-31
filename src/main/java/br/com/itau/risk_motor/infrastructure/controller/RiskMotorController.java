@@ -1,8 +1,8 @@
 package br.com.itau.risk_motor.infrastructure.controller;
 
-import br.com.itau.risk_motor.domain.ScoreRequest;
-import br.com.itau.risk_motor.domain.ScoreResponse;
-import br.com.itau.risk_motor.core.MotorApplicationService;
+import br.com.itau.risk_motor.domain.motor.ScoreRequest;
+import br.com.itau.risk_motor.domain.motor.ScoreResponse;
+import br.com.itau.risk_motor.core.orchestrator.MotorApplicationService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

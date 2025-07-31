@@ -1,4 +1,4 @@
-package br.com.itau.risk_motor.core;
+package br.com.itau.risk_motor.core.rules;
 
 import groovy.lang.Binding;
 import groovy.lang.GroovyShell;

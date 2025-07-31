@@ -1,4 +1,4 @@
-package br.com.itau.risk_motor.core;
+package br.com.itau.risk_motor.core.helper;
 
 import org.springframework.stereotype.Service;
 

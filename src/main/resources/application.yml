@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+rules:
+  path: classpath:rules
+
+spring:
+  application:
+    name: risk-motor
+
+  profiles:
+    active: local

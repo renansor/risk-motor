@@ -1,4 +1,4 @@
-package br.com.itau.risk_motor.core.rules;
+package br.com.itau.risk_motor.infrastructure.rules;
 
 import groovy.lang.Binding;
 import groovy.lang.GroovyShell;
@@ -14,13 +14,13 @@ import java.nio.charset.StandardCharsets;
 
 @Service
 @Log4j2
-public class MotorDomainService {
+public class RulesExecutor implements br.com.itau.risk_motor.core.rules.RulesExecutor {
 
     private final ResourceLoader resourceLoader;
     private final String rulesBasePath;
 
-    public MotorDomainService(ResourceLoader resourceLoader,
-                              @Value("${rules.path:classpath:rules}") String rulesBasePath) {
+    public RulesExecutor(ResourceLoader resourceLoader,
+                         @Value("${rules.path:classpath:rules}") String rulesBasePath) {
         this.resourceLoader = resourceLoader;
         this.rulesBasePath = rulesBasePath.endsWith("/") ? rulesBasePath : rulesBasePath + "/";
     }
@@ -60,7 +60,7 @@ public class MotorDomainService {
         return totalScore;
     }
 
-    private int executeScript(GroovyShell shell, String path, String file) {
+    public int executeScript(GroovyShell shell, String path, String file) {
         String script;
         try {
             Resource resource = resourceLoader.getResource(path+file);
